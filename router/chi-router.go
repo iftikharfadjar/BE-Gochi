@@ -36,6 +36,6 @@ func (*chiRouter) SERVE(port string){
 	http.ListenAndServe(port, chiDispatcher )
 }
 
-func (*chiRouter) GetRouter() chi.Router {
-	return chiDispatcher
+func (*chiRouter) GetRouter() *chi.Router {
+	return &chiDispatcher
 }
