@@ -15,7 +15,6 @@ func main() {
 
 	const port string = ":3000"
 
-	app := httpRouter.GetRouter()
-	_route.InitRoute(app)
+	_route.InitRoute(httpRouter)
 	httpRouter.SERVE(port)
 }

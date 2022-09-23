@@ -1,12 +1,12 @@
 package routes
 
 import (
-	"github.com/go-chi/chi/v5"
+	"github.com/iftikharfadjar/BE-Gochi/router"
 	"net/http"
 )
 
-func InitRoute(r *chi.Mux) {
-	r.Get("/", func(w http.ResponseWriter, r *http.Request) {
+func InitRoute(r router.IRouter) {
+	r.GET("/", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("hi golang"))
 	})
 }
