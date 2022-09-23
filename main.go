@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/iftikharfadjar/Be-GoChi/router"
+	"github.com/iftikharfadjar/BE-Gochi/router"
+	_route "github.com/iftikharfadjar/BE-Gochi/routes"
 )
 
 var (
@@ -13,5 +14,8 @@ func main() {
 	fmt.Println("Hello, World!")
 
 	const port string = ":3000"
+
+	app := httpRouter.GetRouter()
+	_route.InitRoute(app)
 	httpRouter.SERVE(port)
 }

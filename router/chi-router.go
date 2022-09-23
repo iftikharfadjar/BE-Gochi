@@ -35,3 +35,7 @@ func (*chiRouter) SERVE(port string){
 	fmt.Printf("chi HTTP Server running on port %v", port)
 	http.ListenAndServe(port, chiDispatcher )
 }
+
+func (*chiRouter) GetRouter() chi.Router {
+	return chiDispatcher
+}
